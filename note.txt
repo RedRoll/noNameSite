@@ -1,0 +1,14 @@
+Если node-sass не будет работать, то нужно установить определенную версию node-sass@4.14.1 (если не пофиксили этот баг)
+
+
+- если после установки библиотек что-тоне работает - перезапустить реакт сервер(пересоберется сборка)
+
+- УДАЛЕНИЕ ПАКЕТОВ NODE: npm uninstall <name of package> --save - удаляет сам пакет, а так же с файла json из devDependencies
+
+ПОДКЛЮЧЕНИЕ SCSS В WEBPACK:
+- Чтобы подключить(корректно подключить) scss в проект нудно установить:
+- css-loader,
+- style-loader,
+- mini-css-extract-plugin,
+- sass-loader sass WEBPACK
+Потом настроить все это (настроить обработчики файлов) в mudules/rules в webpack.config, так же добавить в plugins - new MiniCssExtractPlugin()
