@@ -13,6 +13,7 @@ module.exports = {
         // path.resolve возвращает возвращает абослютный путь, т.е. создает папку "dist" в корневом каталоге.
         
     },
+    
     // настройка сервера (для того чтобы не билдить/перезагружать страницу при каком-нибуть изменении) ps: изначально его нужно загрузить - "webpack-dev-server" + к нему дополнительно скачать "html-wepack-plugin" и "clean-webpack-plugin"
     devServer: {
         port: 9000,
@@ -31,6 +32,9 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: [MiniCssExtractPlugin.loader, "css-loader"]
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i, exclude: /node_modules/, loader: "file-loader"
             }
         ]
     },

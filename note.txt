@@ -12,3 +12,5 @@
 - mini-css-extract-plugin,
 - sass-loader sass WEBPACK
 Потом настроить все это (настроить обработчики файлов) в mudules/rules в webpack.config, так же добавить в plugins - new MiniCssExtractPlugin()
+
+Для того чтобы картинки загружались нужно установить file-loader и настроить его в webpack.config. Потом просто импортировать нужную картинку и использовать ее в нужном месте
