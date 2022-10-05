@@ -14,3 +14,11 @@
 Потом настроить все это (настроить обработчики файлов) в mudules/rules в webpack.config, так же добавить в plugins - new MiniCssExtractPlugin()
 
 Для того чтобы картинки загружались нужно установить file-loader и настроить его в webpack.config. Потом просто импортировать нужную картинку и использовать ее в нужном месте
+
+НАСТРОЙКА SVG (для правильной работы svg файлов):
+ - установить svg-inline-loader react-inlinesvg
+ - импортировать в компонент import SVG from 'react-inlinesvg';
+ - настроить в webpack.config - test: /\.svg$/,
+                                loader: 'svg-inline-loader'
+ - вставить саму svg <SVG src={imgCart} />
+Если вставить код с самой svg картинки, то можно будет редактировать саму svg внутри компонета (изменять цвет и т д)
