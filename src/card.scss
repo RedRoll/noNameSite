@@ -1,0 +1,22 @@
+.card-wrapper {
+    padding: 20px;
+    border: 1px solid silver;
+    border-radius: 5%;
+    min-height: 180px;
+    width: 155px;
+    img{
+        height: 150px;
+        width: 150px;
+        border: 1px solid gray;
+        border-radius: 3%;
+    }
+    div {
+        margin: 5px 0 5px 0;
+    }
+    .price {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+}
